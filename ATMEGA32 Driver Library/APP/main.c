@@ -77,11 +77,30 @@ int main(void)
 
 int main(void)
 {
-	MCAL_DIO_void_SetPortDirection(PORTD, 0); 
-	MCAL_DIO_void_SetPortDirection(PORTA, 0xFF); //PORTA PINS
+
+	
+	MCAL_DIO_void_SetPinDirection(PC2_PIN, OUTPUT);
+	MCAL_DIO_void_SetPinDirection(PC7_PIN, OUTPUT);
+	MCAL_DIO_void_SetPinDirection(PD3_PIN, OUTPUT);
+	MCAL_DIO_void_SetPinDirection(PA3_PIN, OUTPUT);
+	
 	while(1)
 	{
-		MCAL_DIO_void_SetPortValue(PORTA, MCAL_DIO_uint8_GetPortValue(PORTD));
+		MCAL_DIO_void_SetPinValue(PC2_PIN, HIGH);
+		_delay_ms(1000);
+		MCAL_DIO_void_SetPinValue(PC2_PIN, LOW);
+
+		MCAL_DIO_void_SetPinValue(PC7_PIN, HIGH);
+		_delay_ms(1000);
+		MCAL_DIO_void_SetPinValue(PC7_PIN, LOW);
+		
+		MCAL_DIO_void_SetPinValue(PD3_PIN, HIGH);
+		_delay_ms(1000);
+		MCAL_DIO_void_SetPinValue(PD3_PIN, LOW);
+		
+		MCAL_DIO_void_SetPinValue(PA3_PIN, HIGH);
+		_delay_ms(1000);
+		MCAL_DIO_void_SetPinValue(PA3_PIN, LOW);
 	}
 }
 
