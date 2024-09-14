@@ -5,6 +5,8 @@
  *  Author: ahmed
  */ 
 
+#include "DIO_Private.h"
+#include "DIO_Config.h"
 #include "DIO_Interface.h"
 
 void MCAL_DIO_void_SetPinDirection(uint8_t PortPin, uint8_t PinDirection)

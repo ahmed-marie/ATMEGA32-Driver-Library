@@ -13,6 +13,7 @@
 #ifndef F_CPU
 #define F_CPU 16000000UL
 #include <util/delay.h>
+#include <avr/interrupt.h>
 #endif
 
 // you can use the following library for defining the standard types
